@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset="1" stop-color="#102942"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.24"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L9,3 z" fill="#73e0c1"/>
+    </marker>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 48px; font-weight: 700; fill: #f7fbff; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 23px; font-weight: 400; fill: #afc5d8; }
+      .label { font-family: Arial, sans-serif; font-size: 20px; font-weight: 700; fill: #f7fbff; }
+      .small { font-family: Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #b8ccdc; }
+      .chip { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #0d2731; }
+      .box { fill: #122f49; stroke: #2d5672; stroke-width: 2; rx: 18; }
+      .accent { fill: #113e42; stroke: #54c7a7; stroke-width: 2; rx: 18; }
+      .warn { fill: #44301f; stroke: #f0b35b; stroke-width: 2; rx: 18; }
+      .line { fill: none; stroke: #73e0c1; stroke-width: 4; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="1080" cy="90" r="155" fill="#1e5b68" opacity="0.2"/>
+  <circle cx="80" cy="760" r="210" fill="#183d66" opacity="0.32"/>
+
+  <text x="72" y="92" class="title">Reliable API Ingestion</text>
+  <text x="72" y="132" class="subtitle">Synthetic logistics integration · TypeScript · Node.js · Vitest</text>
+
+  <g filter="url(#shadow)">
+    <rect x="65" y="230" width="170" height="112" class="box"/>
+    <text x="150" y="273" text-anchor="middle" class="label">Carrier API</text>
+    <text x="150" y="302" text-anchor="middle" class="small">webhooks + polling</text>
+
+    <rect x="285" y="230" width="170" height="112" class="accent"/>
+    <text x="370" y="273" text-anchor="middle" class="label">Persist first</text>
+    <text x="370" y="302" text-anchor="middle" class="small">raw delivery log</text>
+
+    <rect x="505" y="230" width="170" height="112" class="box"/>
+    <text x="590" y="263" text-anchor="middle" class="label">Validate</text>
+    <text x="590" y="290" text-anchor="middle" class="small">typed normalization</text>
+    <text x="590" y="313" text-anchor="middle" class="small">actionable failures</text>
+
+    <rect x="725" y="230" width="170" height="112" class="accent"/>
+    <text x="810" y="263" text-anchor="middle" class="label">Deduplicate</text>
+    <text x="810" y="290" text-anchor="middle" class="small">stable event key</text>
+    <text x="810" y="313" text-anchor="middle" class="small">one side effect</text>
+
+    <rect x="945" y="230" width="190" height="112" class="box"/>
+    <text x="1040" y="263" text-anchor="middle" class="label">Process safely</text>
+    <text x="1040" y="290" text-anchor="middle" class="small">bounded retry + jitter</text>
+    <text x="1040" y="313" text-anchor="middle" class="small">idempotent completion</text>
+  </g>
+
+  <path d="M235 286 H275" class="line"/>
+  <path d="M455 286 H495" class="line"/>
+  <path d="M675 286 H715" class="line"/>
+  <path d="M895 286 H935" class="line"/>
+
+  <g filter="url(#shadow)">
+    <rect x="415" y="455" width="260" height="122" class="warn"/>
+    <text x="545" y="496" text-anchor="middle" class="label">Quarantine + replay</text>
+    <text x="545" y="526" text-anchor="middle" class="small">preserve source · correct safely</text>
+    <text x="545" y="551" text-anchor="middle" class="small">record actor, reason, and audit event</text>
+
+    <rect x="745" y="455" width="290" height="122" class="accent"/>
+    <text x="890" y="496" text-anchor="middle" class="label">Reconciliation report</text>
+    <text x="890" y="526" text-anchor="middle" class="small">compare source IDs to internal state</text>
+    <text x="890" y="551" text-anchor="middle" class="small">surface deliberately omitted events</text>
+  </g>
+
+  <path d="M590 342 V445" class="line"/>
+  <path d="M1040 342 V400 H890 V445" class="line"/>
+
+  <g>
+    <rect x="72" y="674" width="205" height="44" rx="22" fill="#73e0c1"/>
+    <text x="174" y="702" text-anchor="middle" class="chip">6 acceptance tests</text>
+    <rect x="294" y="674" width="238" height="44" rx="22" fill="#73e0c1"/>
+    <text x="413" y="702" text-anchor="middle" class="chip">100 → 200 ms retry proof</text>
+    <rect x="549" y="674" width="220" height="44" rx="22" fill="#73e0c1"/>
+    <text x="659" y="702" text-anchor="middle" class="chip">duplicate-safe effects</text>
+    <rect x="786" y="674" width="176" height="44" rx="22" fill="#73e0c1"/>
+    <text x="874" y="702" text-anchor="middle" class="chip">audited replay</text>
+  </g>
+  <text x="72" y="764" class="small">Synthetic demonstration · No client data, credentials, or production claims</text>
+</svg>

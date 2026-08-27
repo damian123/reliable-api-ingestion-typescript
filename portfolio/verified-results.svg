@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f8fb"/>
+      <stop offset="1" stop-color="#e8f0f5"/>
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#0c2235" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      .title { font-family: Arial, sans-serif; font-size: 48px; font-weight: 700; fill: #0d263a; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 22px; font-weight: 400; fill: #567086; }
+      .metric { font-family: Arial, sans-serif; font-size: 46px; font-weight: 700; fill: #0e775f; }
+      .metricLabel { font-family: Arial, sans-serif; font-size: 17px; font-weight: 600; fill: #3b586d; }
+      .code { font-family: Menlo, Consolas, monospace; font-size: 17px; font-weight: 400; fill: #d9e7ef; }
+      .codeAccent { font-family: Menlo, Consolas, monospace; font-size: 17px; font-weight: 700; fill: #7de3c4; }
+      .small { font-family: Arial, sans-serif; font-size: 16px; font-weight: 400; fill: #5e7588; }
+    </style>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg2)"/>
+  <text x="72" y="92" class="title">Verified failure-path behavior</text>
+  <text x="72" y="132" class="subtitle">Executable evidence for retries, duplicates, quarantine, replay, and reconciliation</text>
+
+  <g filter="url(#shadow2)">
+    <rect x="72" y="190" width="300" height="150" rx="20" fill="#ffffff"/>
+    <text x="102" y="252" class="metric">6 / 6</text>
+    <text x="102" y="292" class="metricLabel">acceptance tests passing</text>
+
+    <rect x="400" y="190" width="300" height="150" rx="20" fill="#ffffff"/>
+    <text x="430" y="252" class="metric">3</text>
+    <text x="430" y="292" class="metricLabel">attempts through a simulated 429</text>
+
+    <rect x="728" y="190" width="400" height="150" rx="20" fill="#ffffff"/>
+    <text x="758" y="252" class="metric">1 effect</text>
+    <text x="758" y="292" class="metricLabel">from five repeated webhook deliveries</text>
+  </g>
+
+  <g filter="url(#shadow2)">
+    <rect x="72" y="390" width="1056" height="300" rx="22" fill="#0b1d2b"/>
+    <text x="110" y="438" class="codeAccent">$ npm test</text>
+    <text x="110" y="476" class="code">✓ records every delivery but applies one side effect</text>
+    <text x="110" y="510" class="code">✓ retries transient rate limits with 100 ms → 200 ms backoff</text>
+    <text x="110" y="544" class="code">✓ quarantines malformed payloads without blocking later records</text>
+    <text x="110" y="578" class="code">✓ avoids duplicate effects after a simulated worker restart</text>
+    <text x="110" y="612" class="code">✓ replays a corrected poison event with an audit reason</text>
+    <text x="110" y="646" class="code">✓ reports source events missing from the internal store</text>
+  </g>
+
+  <text x="72" y="752" class="small">TypeScript · Node.js · Vitest · strict typecheck · synthetic logistics events</text>
+</svg>
