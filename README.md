@@ -60,3 +60,7 @@ test/              six acceptance-scenario tests
 ## Non-goals
 
 No real carrier credentials or data, financial reconciliation, multi-region guarantees, or production SLA. All names and records are synthetic.
+
+## License
+
+[MIT](LICENSE)
