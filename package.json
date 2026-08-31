@@ -6,7 +6,8 @@
   "scripts": {
     "demo": "tsx src/demo.ts",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "verify": "npm run typecheck && npm test && npm run demo"
   },
   "devDependencies": {
     "@types/node": "^24.0.0",

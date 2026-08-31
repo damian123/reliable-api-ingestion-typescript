@@ -18,16 +18,14 @@ Portfolio project using fictional data. It is not connected to an employer, clie
 
 ```bash
 npm ci
-npm run typecheck
-npm test
-npm run demo
+npm run verify
 ```
 
 The demo prints processed, duplicate, quarantined, retry, reconciliation, and audit outcomes as structured JSON.
 
 ## Verification
 
-Six Vitest cases cover the paths above. There is no GitHub Actions workflow in this repository yet.
+Six Vitest cases cover the paths above. GitHub Actions runs a clean install, typecheck, test suite, and deterministic demo on Node.js 24 for every push and pull request.
 
 ![Verified results](portfolio/verified-results.png)
 
